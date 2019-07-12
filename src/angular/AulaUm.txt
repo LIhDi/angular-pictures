@@ -1,0 +1,24 @@
+
+  Todo componente deve ter: @Component
+
+  AngularExpression: {{}}
+
+  One way data binding ("data binding unidirecional"), os dados saem do componente, da fonte de dados,
+  e vão para o template, no entanto não fazem o caminho contrário.
+
+  Uma boa pratica é colocar .component, nos componentes Trata-se de uma convenção que não podemos deixar de seguir.
+
+  Todo componente deve fazer parte de um modulo.
+  Todo modulo deve ter @NgModule
+
+- declarations: [ PhotoComponent ]  Declara os componentes existentes
+- exports: [ PhotoComponent ]       Declara os componentes que vao ser exportados
+
+  app.module é o primeiro modulo a ser carregado pela nossa aplicação
+  app.component é o primeiro componente a ser carregado
+  Se dois componentes fazem parte do mesmo modulo, então eles são acessiveis um pelo outro, pois estão no mesmo modulo.
+
+   Inbound properties, aceitam receber um valor por meio de sua forma declarativa.
+   Com o @Input(), tornamos possivel receber um valor de um outro component que está a chamar o nosso.
+
+   *ngFor Para percorrer listas
