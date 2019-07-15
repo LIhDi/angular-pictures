@@ -22,3 +22,14 @@
    Com o @Input(), tornamos possivel receber um valor de um outro component que está a chamar o nosso.
 
    *ngFor Para percorrer listas
+
+   Quando usamos private ou public no construtor para receber alguma variavel, esta se torna uma propriedade da classe,
+por isso podemos usar o this.http
+- constructor(private http: HttpClient)
+
+@Injectable({ providedIn: 'root'} ')
+Colocamos nas classes que queremos injetar no construtor, e dizemos o scopo , ou seja o escopo raiz o que significa que todos vão utilizar esse mesmo service
+
+
+ngOnInit()
+Do ciclo de vida do Angular, o primeiro a ser chamado
