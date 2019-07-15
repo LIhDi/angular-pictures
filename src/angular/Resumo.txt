@@ -33,3 +33,10 @@ Colocamos nas classes que queremos injetar no construtor, e dizemos o scopo , ou
 
 ngOnInit()
 Do ciclo de vida do Angular, o primeiro a ser chamado
+
+  É uma boa pratica importamos o:
+-import { CommonModule } from '@angular/common';
+nos modulos que criarmos.
+
+
+Para criarmos componentes pelo angular cli usamos : ng generate component photos/photo-form
