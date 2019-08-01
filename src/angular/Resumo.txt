@@ -41,7 +41,7 @@ nos modulos que criarmos.
 
 Para criarmos componentes pelo angular cli usamos : ng generate component photos/photo-form
 
-  A cada digito qu eue digitar ele vai pegar o valor do input e colocar na propriedade filter,
+  A cada digito qu eue digitar ele vai pegar o O Pipe valor do input e colocar na propriedade filter,
 mas desta forma não vai funcionar pois ele tenta realizar o DataBinding acontece do componente
 para o template
   - [keyup]="filter = $event.target.value"
@@ -49,3 +49,18 @@ para o template
   Iremos fazer o EnventBind que é realizado com (), o evento é disparado,
 indo da view do template para o componente.
   - (keyup)="filter = $event.target.value"
+
+O Pipe é uma transformação que vai ocorrer, podemos usar os do angular:
+  nome | uppercase
+Ou criarmos os nossos:
+- Para criarmos é necessário criar o arquivo .pipe.ts
+- Usar a anotação de @Pipe
+- Deve ser implementado o metodo transform ond eo 1° parametro é em quem vais aplicar a transformação
+- O 2° é uma [] de parametros que vamos passar
+- Pipes devem ser declarados no module
+
+[photos]="photos | filterByDescription: filter"
+
+- .trim() tira os espaços vazios
+- *ngIf
+
