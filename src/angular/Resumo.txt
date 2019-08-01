@@ -35,8 +35,17 @@ ngOnInit()
 Do ciclo de vida do Angular, o primeiro a ser chamado
 
   É uma boa pratica importamos o:
--import { CommonModule } from '@angular/common';
+- import { CommonModule } from '@angular/common';
 nos modulos que criarmos.
 
 
 Para criarmos componentes pelo angular cli usamos : ng generate component photos/photo-form
+
+  A cada digito qu eue digitar ele vai pegar o valor do input e colocar na propriedade filter,
+mas desta forma não vai funcionar pois ele tenta realizar o DataBinding acontece do componente
+para o template
+  - [keyup]="filter = $event.target.value"
+
+  Iremos fazer o EnventBind que é realizado com (), o evento é disparado,
+indo da view do template para o componente.
+  - (keyup)="filter = $event.target.value"
